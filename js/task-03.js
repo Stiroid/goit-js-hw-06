@@ -12,3 +12,18 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const unorderedList = document.querySelector('.gallery');
+
+
+const imageEl = images.forEach(image => {
+  
+  const k2 = `<li>
+  <img src=${image.url} alt=${image.alt} width='400px'>
+  </li>`;
+  
+  unorderedList.insertAdjacentHTML('afterbegin', k2);
+});
+unorderedList.style.listStyle = 'none';
+console.log(unorderedList);
+
