@@ -1,8 +1,10 @@
-let range = document.querySelector('#font-size-control');
+let rangeEl = document.querySelector('#font-size-control');
 let itemEl = document.querySelector('#text');
-range.addEventListener("input", (event) => {
-itemEl.style.fontSize = range.value + "px";
+itemEl.style.fontSize = rangeEl.value + "px";
+
+
+rangeEl.addEventListener("input", (event) => {
+itemEl.style.fontSize = event.currentTarget.value + "px";
 });
 
-
-
+console.log(rangeEl.value);
